@@ -100,3 +100,52 @@
 
 
 //函数调用与函数调用的位置没有关系，与定义函数的位置相关
+//JS所有的对象都是通过构造函数产生的
+
+
+function Poker(number, color){
+    this.number = number;
+    this.color = color;
+    this.print = function(){
+        if(this.number === 14){
+            console.log('小王');
+        }
+        else if(this.number === 15){
+            console.log('大王')
+        } else{
+        var colors = ['♥','♠','♦','♣'];
+        var numbers = ['A','2','3','4','5','6','7','8','9','10','J','Q','K'];
+        var color = colors[this.color - 1];
+        var number = numbers[this.number - 1]
+        console.log(color + number)
+        }
+    }
+}
+// var p1 = new Poker(1, 1);
+// p1.print();
+// var a = [];
+// for(var i = 1;i <= 13;i++){
+//     for(var j = 1;j <= 4;j++){
+//         a.push(new Poker(i,j));
+//     }
+// }
+// a.push(new Poker(14,1))
+// a.push(new Poker(15,1))
+// console.log(a);
+function Deck(){
+    this.pokers = [];
+    for(var i = 1;i <= 13;i++){
+        for(var j = 1;j <= 4;j++){
+            this.pokers.push(new Poker(i,j));
+        }
+    }
+    this.pokers.push(new Poker(14,1))
+    this.pokers.push(new Poker(15,1))
+    this.prints = function(){
+        for(var i = 0;i < this.pokers.length;i++){
+            this.pokers[i].print();
+        }
+}
+}   
+var deck = new Deck();
+deck.prints();
