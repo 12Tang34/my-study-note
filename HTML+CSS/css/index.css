@@ -1,0 +1,118 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    background: #131013;
+    color: #333;
+}
+
+.container{
+    background: #fff;
+    width: 400px;
+    margin: 100px auto;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.container h1{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-item{
+    margin-bottom: 15px;
+}
+
+.txt{
+    outline: none;
+    border: 1px solid #ccc;
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 0 10px;
+}
+
+.txt:focus{
+    border-color: #5f8be8;
+}
+
+select.txt{
+    height: 100px;
+    padding: 10px;
+}
+
+textarea.txt{
+    height: 100px;
+    padding: 10px;
+    /* 设置多行文本框是否可以被用户修改尺寸 */
+    resize: none;
+}
+
+button{
+    height: 40px;
+    width: 150px;
+    border: none;
+    outline: none;
+    background: #5f8be8;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 5px;
+    /* 鼠标移上去的效果 */
+    cursor: pointer;
+}
+
+button:hover{
+    background: #759ae9;
+}
+
+button:disabled{
+    background: green;
+}
+
+.left{
+    float: left;
+}
+
+.right{
+    float: right;
+}
+
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.captcha .txt{
+    width: 170px;
+}
+
+.title{
+    margin-right: 10px;
+}
+
+.policy{
+    font-size: 12px;
+}
+
+.policy span{
+    vertical-align: 2px;
+}
+
+label{
+    cursor: pointer;
+}
+
+/* 表示后边的兄弟 */
+label input{
+    color: #aaa;
+}
+
+label input:checked~span{
+    color: #333;
+}
+

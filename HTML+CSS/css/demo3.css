@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.item{
+    outline: 1px solid;
+    width:500px;
+    height: 250px;
+    margin: 30px auto;
+    position: relative;
+}
+
+.item img{
+    width: 500px;
+    height: 250px;
+}
+
+.item .aside{
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 20px;
+    font-size: 12px;
+    line-height: 20px;
+    bottom: 0;
+    left: 0;
+    color: #fff;
+    padding: 0 10px;
+}
+
+.aside .number{
+    float: left;
+}
+
+.aside .date{
+    float: right;
+}
+
+.number::before{
+    content: "";
+    width: 13px;
+    height: 20px;
+    display: inline-block;
+    background: url(../assets/big.png);
+    background-position: -156px -145px;
+    vertical-align: -3px;
+    margin-right: 3px;
+}
+
+.modal{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background:rgba(0, 0, 0, 0.5);
+}
